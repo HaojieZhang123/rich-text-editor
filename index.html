@@ -18,9 +18,9 @@
     <header>
 
         <!-- toolbar sections -->
-        <div id="toolbar-top">
+        <div id="toolbar-top" class="col-100 d-flex">
 
-            <ul>
+            <ul class="col-100 d-flex">
                 <li>File</li>
                 <li>Home</li>
                 <li>Insert</li>
@@ -37,9 +37,9 @@
         </div>
 
         <!-- Home toolbar -->
-        <div id="toolbar-home">
+        <div id="toolbar-home" class="col-100 d-flex">
             <!-- clipboard tools -->
-            <div id="clipboard-tools">
+            <div id="clipboard-tools" class="d-flex flex-wrap justify-content-evenly align-items-center">
                 <div class="col-70">
                     <!-- copy -->
                     <div class="copy">
@@ -58,31 +58,34 @@
                     </div>
                 </div>
 
-                <div class="col-100 section-label">
+                <div class="col-100 section-label text-center">
                     Clipboard
                 </div>
 
             </div>
             <!-- font tools -->
-            <div id="font-tools">
+            <div id="font-tools" class="d-flex flex-wrap justify-content-evenly align-items-center">
 
-                <!-- font -->
-                <select name="font" id="font">
-                    <option value="Arial">Arial</option>
-                    <option value="Brush Script MT">Brush Script MT</option>
-                    <option value="Courier New">Courier New</option>
-                    <option value="Garamond">Garamond</option>
-                    <option value="Georgia">Georgia</option>
-                    <option value="Tahoma">Tahoma</option>
-                    <option value="Times New Roman">Times New Roman</option>
-                    <option value="Verdana">Verdana</option>
-                </select>
+                <div class="col-100 d-flex justify-content-evenly align-items-center">
+                    <!-- font -->
+                    <select name="font" id="font">
+                        <option value="Arial">Arial</option>
+                        <option value="Brush Script MT">Brush Script MT</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Garamond">Garamond</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+    
+                    <!-- font size -->
+                    <input type="number" name="font-size" id="font-size">
+                </div>
 
-                <!-- font size -->
-                <input type="number" name="font-size" id="font-size">
 
                 <!-- text format -->
-                <div id="format-tools">
+                <div id="format-tools" class="d-flex flex-wrap">
                     <!-- bold -->
                     <div id="bold">
                         <i class="fa-solid fa-bold"></i>
@@ -110,7 +113,7 @@
                 </div>
 
                 <!-- text colors -->
-                <div id="color-tools">
+                <div id="color-tools" class="d-flex flex-wrap">
                     <!-- highlight color -->
                     <div id="highlight-color">
                         <input type="color" name="highlight-color">
@@ -123,16 +126,16 @@
                     </div>
                 </div>
 
-                <div class="col-100 section-label">
+                <div class="col-100 section-label text-center">
                     Font
                 </div>
 
             </div>
             <!-- paragraph tools -->
-            <div id="paragraph-tools">
+            <div id="paragraph-tools" class="d-flex flex-wrap justify-content-evenly align-items-center">
 
                 <!-- lists -->
-                <div id="list-tools">
+                <div id="list-tools" class="d-flex">
                     <!-- unordered list -->
                     <div id="unordered-list">
                         <i class="fa-solid fa-list"></i>
@@ -144,7 +147,7 @@
                 </div>
 
                 <!-- indentation -->
-                <div id="indentation-tools">
+                <div id="indentation-tools" class="d-flex">
                     <!-- left indent -->
                     <div id="left-indent">
                         <i class="fa-solid fa-indent"></i>
@@ -156,7 +159,7 @@
                 </div>
 
                 <!-- alignment -->
-                <div id="alignment-tools">
+                <div id="alignment-tools" class="d-flex">
                     <!-- left align -->
                     <div id="left-align">
                         <i class="fa-solid fa-align-left"></i>
@@ -175,13 +178,13 @@
                     </div>
                 </div>
 
-                <div class="col-100 section-label">
+                <div class="col-100 section-label text-center">
                     Paragraph
                 </div>
 
             </div>
             <!-- styles -->
-            <div id="style-tool">
+            <div id="style-tool" class="d-flex flex-wrap justify-content-evenly align-items-center">
 
                 <!-- styles -->
                 <div>
@@ -196,7 +199,7 @@
                     <option value="h6">H6</option>
                 </select>
 
-                <div class="col-100 section-label">
+                <div class="col-100 section-label text-center">
                     Style
                 </div>
 
@@ -207,6 +210,10 @@
     </header>
 
     <main>
+
+        <div class="sheet A4">
+
+        </div>
 
     </main>
 
