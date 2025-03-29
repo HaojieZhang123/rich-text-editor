@@ -22,7 +22,7 @@
 
             <ul class="col-100 d-flex">
                 <li>File</li>
-                <li>Home</li>
+                <li class="selected">Home</li>
                 <li>Insert</li>
                 <li>Draw</li>
                 <li>Design</li>
@@ -37,24 +37,24 @@
         </div>
 
         <!-- Home toolbar -->
-        <div id="toolbar-home" class="col-100 d-flex">
+        <div id="toolbar-home" class="big-toolbar d-flex">
             <!-- clipboard tools -->
-            <div id="clipboard-tools" class="d-flex flex-wrap justify-content-evenly align-items-center">
+            <div id="clipboard-tools" class="d-flex flex-wrap justify-content-around align-items-center toolbar-section">
                 <div class="col-70">
                     <!-- copy -->
-                    <div class="copy">
-                        <i class="fa-solid fa-copy"></i>
+                    <div class="copy d-flex justify-content-center align-items-center">
+                        <img src="./img/copy.png" alt="copy">
                     </div>
                 </div>
 
-                <div class="col-30">
-                    <div>
+                <div class="col-30 d-flex flex-column flex-wrap">
+                    <div class="cut col-100 d-flex justify-content-center align-items-center">
                         <!-- cut -->
-                        <i class="fa-solid fa-scissors"></i>
+                        <img src="./img/scissors.png" alt="cut">
                     </div>
-                    <div>
+                    <div class="paste col-100 d-flex justify-content-center align-items-center">
                         <!-- paste -->
-                        <i class="fa-solid fa-paste"></i>
+                        <img src="./img/paste.png" alt="past">
                     </div>
                 </div>
 
@@ -64,11 +64,11 @@
 
             </div>
             <!-- font tools -->
-            <div id="font-tools" class="d-flex flex-wrap justify-content-evenly align-items-center">
+            <div id="font-tools" class="d-flex flex-wrap justify-content-evenly align-items-center toolbar-section">
 
-                <div class="col-100 d-flex justify-content-evenly align-items-center">
+                <div class="col-50 d-flex justify-content-evenly align-items-center">
                     <!-- font -->
-                    <select name="font" id="font">
+                    <select name="font" id="font" class="col-70">
                         <option value="Arial">Arial</option>
                         <option value="Brush Script MT">Brush Script MT</option>
                         <option value="Courier New">Courier New</option>
@@ -80,50 +80,53 @@
                     </select>
     
                     <!-- font size -->
-                    <input type="number" name="font-size" id="font-size">
+                    <input type="number" name="font-size" id="font-size" class="col-30">
                 </div>
-
-
-                <!-- text format -->
-                <div id="format-tools" class="d-flex flex-wrap">
-                    <!-- bold -->
-                    <div id="bold">
-                        <i class="fa-solid fa-bold"></i>
-                    </div>
-                    <!-- italic -->
-                    <div id="italic">
-                        <i class="fa-solid fa-italic"></i>
-                    </div>
-                    <!-- underline -->
-                    <div id="underline">
-                        <i class="fa-solid fa-underline"></i>
-                    </div>
-                    <!-- strikethrough -->
-                    <div id="strikethrough">
-                        <i class="fa-solid fa-strikethrough"></i>
-                    </div>
-                    <!-- subscript -->
-                    <div id="subscript">
-                        <i class="fa-solid fa-subscript"></i>
-                    </div>
-                    <!-- superscript -->
-                    <div id="superscript">
-                        <i class="fa-solid fa-superscript"></i>
-                    </div>
-                </div>
-
+                
                 <!-- text colors -->
-                <div id="color-tools" class="d-flex flex-wrap">
+                <div id="color-tools" class="col-50 d-flex flex-wrap justify-content-evenly align-items-center">
                     <!-- highlight color -->
-                    <div id="highlight-color">
+                    <div id="highlight-color" class="d-flex align-items-center">
                         <input type="color" name="highlight-color">
-                        <label for="highlight-color">Highlight</label>
+                        <label for="highlight-color">
+                            highlight
+                        </label>
                     </div>
                     <!-- text color -->
-                    <div id="text-color">
+                    <div id="text-color" class="d-flex align-items-center">
                         <input type="color" name="text-color">
-                        <label for="text-color">Font color</label>
+                        <label for="text-color">
+                            font color
+                        </label>
                     </div>
+                </div>
+
+                <!-- text format -->
+                <div id="format-tools" class="col-100 d-flex flex-wrap justify-content-around align-items-center">
+                    <!-- bold -->
+                    <button id="bold">
+                        <i class="fa-solid fa-bold"></i>
+                    </button>
+                    <!-- italic -->
+                    <button id="italic">
+                        <i class="fa-solid fa-italic"></i>
+                    </button>
+                    <!-- underline -->
+                    <button id="underline">
+                        <i class="fa-solid fa-underline"></i>
+                    </button>
+                    <!-- strikethrough -->
+                    <button id="strikethrough">
+                        <i class="fa-solid fa-strikethrough"></i>
+                    </button>
+                    <!-- subscript -->
+                    <button id="subscript">
+                        <i class="fa-solid fa-subscript"></i>
+                    </button>
+                    <!-- superscript -->
+                    <button id="superscript">
+                        <i class="fa-solid fa-superscript"></i>
+                    </button>
                 </div>
 
                 <div class="col-100 section-label text-center">
@@ -132,50 +135,50 @@
 
             </div>
             <!-- paragraph tools -->
-            <div id="paragraph-tools" class="d-flex flex-wrap justify-content-evenly align-items-center">
+            <div id="paragraph-tools" class="d-flex flex-wrap justify-content-evenly align-items-center toolbar-section">
 
                 <!-- lists -->
-                <div id="list-tools" class="d-flex">
+                <div id="list-tools" class="d-flex col-50 justify-content-evenly align-items-center">
                     <!-- unordered list -->
-                    <div id="unordered-list">
+                    <button id="unordered-list">
                         <i class="fa-solid fa-list"></i>
-                    </div>
+                    </button>
                     <!-- ordered list -->
-                    <div id="ordered-list">
+                    <button id="ordered-list">
                         <i class="fa-solid fa-list-numeric"></i>
-                    </div>
+                    </button>
                 </div>
 
                 <!-- indentation -->
-                <div id="indentation-tools" class="d-flex">
+                <div id="indentation-tools" class="d-flex col-50 justify-content-evenly align-items-center">
                     <!-- left indent -->
-                    <div id="left-indent">
+                    <button id="left-indent">
                         <i class="fa-solid fa-indent"></i>
-                    </div>
+                    </button>
                     <!-- right indent -->
-                    <div id="right-indent">
+                    <button id="right-indent">
                         <i class="fa-solid fa-outdent"></i>
-                    </div>
+                    </button>
                 </div>
 
                 <!-- alignment -->
-                <div id="alignment-tools" class="d-flex">
+                <div id="alignment-tools" class="d-flex col-100 justify-content-evenly align-items-center">
                     <!-- left align -->
-                    <div id="left-align">
+                    <button id="left-align">
                         <i class="fa-solid fa-align-left"></i>
-                    </div>
+                    </button>
                     <!-- center align -->
-                    <div id="center-align">
+                    <button id="center-align">
                         <i class="fa-solid fa-align-center"></i>
-                    </div>
+                    </button>
                     <!-- right align -->
-                    <div id="right-align">
+                    <button id="right-align">
                         <i class="fa-solid fa-align-right"></i>
-                    </div>
+                    </button>
                     <!-- justify -->
-                    <div id="justify">
+                    <button id="justify">
                         <i class="fa-solid fa-align-justify"></i>
-                    </div>
+                    </button>
                 </div>
 
                 <div class="col-100 section-label text-center">
@@ -184,23 +187,25 @@
 
             </div>
             <!-- styles -->
-            <div id="style-tool" class="d-flex flex-wrap justify-content-evenly align-items-center">
+            <div id="styles-tools" class="d-flex flex-wrap justify-content-evenly align-items-center toolbar-section">
 
                 <!-- styles -->
-                <div>
-                    <i class="fa-light fa-heading"></i>
+                <!-- <div class="col-100 d-flex justify-content-evenly align-items-center">
+                    <img src="./img/text-style.png" alt="style">
+                </div> -->
+                <div class="col-100 d-flex justify-content-evenly align-items-center">
+                    <select name="style" id="style">
+                        <option value="h1">H1</option>
+                        <option value="h2">H2</option>
+                        <option value="h3">H3</option>
+                        <option value="h4">H4</option>
+                        <option value="h5">H5</option>
+                        <option value="h6">H6</option>
+                    </select>
                 </div>
-                <select name="style" id="style">
-                    <option value="h1">H1</option>
-                    <option value="h2">H2</option>
-                    <option value="h3">H3</option>
-                    <option value="h4">H4</option>
-                    <option value="h5">H5</option>
-                    <option value="h6">H6</option>
-                </select>
 
                 <div class="col-100 section-label text-center">
-                    Style
+                    Styles
                 </div>
 
             </div>
@@ -212,8 +217,9 @@
     <main>
 
         <div class="sheet A4">
-
+            <div id="text-input" contenteditable="true"></div>
         </div>
+
 
     </main>
 
