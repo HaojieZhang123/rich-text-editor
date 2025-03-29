@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michaelsoft Attic</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <!-- toolbar sections -->
+        <div id="toolbar-top">
+
+            <ul>
+                <li>File</li>
+                <li>Home</li>
+                <li>Insert</li>
+                <li>Draw</li>
+                <li>Design</li>
+                <li>Layout</li>
+                <li>Reference</li>
+                <li>Mailings</li>
+                <li>Review</li>
+                <li>View</li>
+                <li>Help</li>
+            </ul>
+
+        </div>
+
+        <!-- Home toolbar -->
+        <div id="toolbar-home">
+            <!-- clipboard tools -->
+            <div id="clipboard-tools">
+                <div class="col-70">
+                    <!-- copy -->
+                    <div class="copy">
+                        <i class="fa-solid fa-copy"></i>
+                    </div>
+                </div>
+
+                <div class="col-30">
+                    <div>
+                        <!-- cut -->
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <div>
+                        <!-- paste -->
+                        <i class="fa-solid fa-paste"></i>
+                    </div>
+                </div>
+
+                <div class="col-100 section-label">
+                    Clipboard
+                </div>
+
+            </div>
+            <!-- font tools -->
+            <div id="font-tools">
+
+                <!-- font -->
+                <select name="font" id="font">
+                    <option value="Arial">Arial</option>
+                    <option value="Brush Script MT">Brush Script MT</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+
+                <!-- font size -->
+                <input type="number" name="font-size" id="font-size">
+
+                <!-- text format -->
+                <div id="text-format">
+                    <!-- bold -->
+                    <div id="bold">
+                        <i class="fa-solid fa-bold"></i>
+                    </div>
+                    <!-- italic -->
+                    <div id="italic">
+                        <i class="fa-solid fa-italic"></i>
+                    </div>
+                    <!-- underline -->
+                    <div id="underline">
+                        <i class="fa-solid fa-underline"></i>
+                    </div>
+                    <!-- strikethrough -->
+                    <div id="strikethrough">
+                        <i class="fa-solid fa-strikethrough"></i>
+                    </div>
+                    <!-- subscript -->
+                    <div id="subscript">
+                        <i class="fa-solid fa-subscript"></i>
+                    </div>
+                    <!-- superscript -->
+                    <div id="superscript">
+                        <i class="fa-solid fa-superscript"></i>
+                    </div>
+                </div>
+
+                <!-- text colors -->
+                <div id="text-colors">
+                    <!-- highlight color -->
+                    <div id="highlight-color">
+                        <input type="color" name="highlight-color">
+                        <label for="highlight-color">Highlight</label>
+                    </div>
+                    <!-- text color -->
+                    <div id="text-color">
+                        <input type="color" name="text-color">
+                        <label for="text-color">Font color</label>
+                    </div>
+                </div>
+
+                <div class="col-100 section-label">
+                    Font
+                </div>
+
+            </div>
+            <!-- paragraph tools -->
+            <div id="paragraph-tools">
+
+
+                <div class="col-100 section-label">
+                    Paragraph
+                </div>
+
+            </div>
+            <!-- styles -->
+            <div id="style-tool">
+
+
+                <div class="col-100 section-label">
+                    Style
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <main>
+
+    </main>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
