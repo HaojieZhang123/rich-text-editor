@@ -162,6 +162,12 @@ header{
     width: 150px;
     height: 100%;
 }
+#clipboard-tools button{
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+}
 .copy{
     padding: 10px;
 }
@@ -282,7 +288,7 @@ main{
 #toolbar-top li:hover:not(.selected){
     border-bottom: #666 3px solid;
 }
-#clipboard-tools .copy:hover, #clipboard-tools .cut:hover, #clipboard-tools .paste:hover, #format-tools button:hover, #paragraph-tools button:hover{
+#clipboard-tools button:hover, #format-tools button:hover, #paragraph-tools button:hover{
     background-color: #E6E6E6;
 }
 #register:hover{

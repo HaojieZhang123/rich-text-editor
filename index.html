@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michaelsoft Attic</title>
+    <title>Michaelsoft Attic Phrase - untitled document</title>
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -21,7 +21,7 @@
         <div id="title-bar" class="col-100 d-flex justify-content-between">
             <div id="logo" class="d-flex justify-content-start align-items-center">
                 <img src="./img/Microsoft_Office_Word_(2019–present).svg.png" alt="Office">
-                <span>Michaelsoft Attic Phrase</span>
+                <span>WYSIWYG editor</span>
             </div>
             <div id="title" class="d-flex justify-content-center align-items-center">untitled document</div>
             <div id="user" class="d-flex justify-content-end align-items-center">
@@ -53,22 +53,22 @@
         <div id="toolbar-home" class="big-toolbar d-flex">
             <!-- clipboard tools -->
             <div id="clipboard-tools" class="d-flex flex-wrap justify-content-around align-items-center toolbar-section">
-                <div class="col-70">
+                <div class="col-50 d-flex justify-content-center align-items-center">
                     <!-- copy -->
-                    <div class="copy d-flex justify-content-center align-items-center">
+                    <button id="copy" class="copy option-button">
                         <img src="./img/copy.png" alt="copy">
-                    </div>
+                    </button>
                 </div>
 
-                <div class="col-30 d-flex flex-column flex-wrap">
-                    <div class="cut col-100 d-flex justify-content-center align-items-center">
+                <div class="col-50 d-flex flex-column flex-wrap">
+                    <button id="cut" class="cut col-100 d-flex justify-content-center align-items-center option-button">
                         <!-- cut -->
                         <img src="./img/scissors.png" alt="cut">
-                    </div>
-                    <div class="paste col-100 d-flex justify-content-center align-items-center">
+                    </button>
+                    <button id="paste" class="paste col-100 d-flex justify-content-center align-items-center option-button">
                         <!-- paste -->
                         <img src="./img/paste.png" alt="past">
-                    </div>
+                    </button>
                 </div>
 
                 <div class="col-100 section-label text-center">
@@ -81,25 +81,25 @@
 
                 <div class="col-50 d-flex justify-content-evenly align-items-center">
                     <!-- font -->
-                    <select name="font" id="font" class="col-70">
+                    <select name="font" id="font" class="col-70 adv-option-button">
                     </select>
     
                     <!-- font size -->
-                    <input type="number" name="font-size" id="font-size" class="col-30">
+                    <input type="number" name="font-size" id="fontSize" class="col-30 adv-option-button">
                 </div>
                 
                 <!-- text colors -->
                 <div id="color-tools" class="col-50 d-flex flex-wrap justify-content-evenly align-items-center">
                     <!-- highlight color -->
                     <div id="highlight-color" class="d-flex align-items-center">
-                        <input type="color" name="highlight-color">
+                        <input type="color" name="highlight-color" id="backColor" class="adv-option-button">
                         <label for="highlight-color">
                             highlight
                         </label>
                     </div>
                     <!-- text color -->
                     <div id="text-color" class="d-flex align-items-center">
-                        <input type="color" name="text-color">
+                        <input type="color" name="text-color" id="foreColor" class="adv-option-button">
                         <label for="text-color">
                             font color
                         </label>
@@ -109,27 +109,27 @@
                 <!-- text format -->
                 <div id="format-tools" class="col-70 d-flex flex-wrap justify-content-around align-items-center">
                     <!-- bold -->
-                    <button id="bold">
+                    <button id="bold" class="option-button format">
                         <i class="fa-solid fa-bold"></i>
                     </button>
                     <!-- italic -->
-                    <button id="italic">
+                    <button id="italic" class="option-button format">
                         <i class="fa-solid fa-italic"></i>
                     </button>
                     <!-- underline -->
-                    <button id="underline">
+                    <button id="underline" class="option-button format">
                         <i class="fa-solid fa-underline"></i>
                     </button>
                     <!-- strikethrough -->
-                    <button id="strikethrough">
+                    <button id="strikethrough" class="option-button format">
                         <i class="fa-solid fa-strikethrough"></i>
                     </button>
                     <!-- subscript -->
-                    <button id="subscript">
+                    <button id="subscript" class="option-button script">
                         <i class="fa-solid fa-subscript"></i>
                     </button>
                     <!-- superscript -->
-                    <button id="superscript">
+                    <button id="superscript" class="option-button script">
                         <i class="fa-solid fa-superscript"></i>
                     </button>
                 </div>
@@ -145,11 +145,11 @@
                 <!-- lists -->
                 <div id="list-tools" class="d-flex col-50 justify-content-evenly align-items-center">
                     <!-- unordered list -->
-                    <button id="unordered-list">
+                    <button id="insertUnorderedList" class="option-button">
                         <i class="fa-solid fa-list"></i>
                     </button>
                     <!-- ordered list -->
-                    <button id="ordered-list">
+                    <button id="insertOrderedList" class="option-button">
                         <i class="fa-solid fa-list-numeric"></i>
                     </button>
                 </div>
@@ -157,11 +157,11 @@
                 <!-- indentation -->
                 <div id="indentation-tools" class="d-flex col-50 justify-content-evenly align-items-center">
                     <!-- left indent -->
-                    <button id="left-indent">
+                    <button id="indent" class="option-button spacing">
                         <i class="fa-solid fa-indent"></i>
                     </button>
                     <!-- right indent -->
-                    <button id="right-indent">
+                    <button id="outdent" class="option-button spacing">
                         <i class="fa-solid fa-outdent"></i>
                     </button>
                 </div>
@@ -169,19 +169,19 @@
                 <!-- alignment -->
                 <div id="alignment-tools" class="d-flex col-100 justify-content-evenly align-items-center">
                     <!-- left align -->
-                    <button id="left-align">
+                    <button id="justifyLeft" class="option-button align">
                         <i class="fa-solid fa-align-left"></i>
                     </button>
                     <!-- center align -->
-                    <button id="center-align">
+                    <button id="justifyCenter" class="option-button align">
                         <i class="fa-solid fa-align-center"></i>
                     </button>
                     <!-- right align -->
-                    <button id="right-align">
+                    <button id="justifyRight" class="option-button align">
                         <i class="fa-solid fa-align-right"></i>
                     </button>
                     <!-- justify -->
-                    <button id="justify">
+                    <button id="justifyFull" class="option-button align">
                         <i class="fa-solid fa-align-justify"></i>
                     </button>
                 </div>
@@ -199,7 +199,7 @@
                     <img src="./img/text-style.png" alt="style">
                 </div> -->
                 <div class="col-100 d-flex justify-content-evenly align-items-center">
-                    <select name="style" id="style">
+                    <select name="style" id="style" class="adv-option-button">
                         <option value="h1">H1</option>
                         <option value="h2">H2</option>
                         <option value="h3">H3</option>
