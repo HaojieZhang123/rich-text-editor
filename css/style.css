@@ -90,6 +90,39 @@ header{
     z-index: 999;
     background-color: #E6E6E6;
 }
+/* title bar */
+#title-bar{
+    height: 25px;
+    padding: 0 5px;
+}
+#logo{
+    height: 100%;
+    width: 300px;
+    padding: 5px;
+}
+#logo img{
+    height: 100%;
+    margin-right: 5px;
+}
+#user{
+    width: 300px;
+    gap: 5px;
+}
+#user button{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+#register{
+    background-color: #FAFAFA;
+}
+#login{
+    background-color: #295596;
+    color: #fff;
+}
+#user button:hover{
+}
+
 /* toolbar top */
 #toolbar-top{
     width: 100%;
@@ -179,8 +212,8 @@ input[type="color"]::-moz-color-swatch {
     padding: 0 5px;
 }
 #format-tools button{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border: none;
     padding: 3px;
@@ -191,8 +224,8 @@ input[type="color"]::-moz-color-swatch {
     width: 200px;
 }
 #paragraph-tools button{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border: none;
     padding: 3px;
@@ -249,6 +282,12 @@ main{
 #toolbar-top li:hover:not(.selected){
     border-bottom: #666 3px solid;
 }
-.big-toolbar button:hover{
-    background-color: red;
+#clipboard-tools .copy:hover, #clipboard-tools .cut:hover, #clipboard-tools .paste:hover, #format-tools button:hover, #paragraph-tools button:hover{
+    background-color: #E6E6E6;
+}
+#register:hover{
+    background-color: #E6E6E6;
+}
+#login:hover{
+    background-color: #378CFF;
 }

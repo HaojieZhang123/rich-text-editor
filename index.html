@@ -17,6 +17,19 @@
 
     <header>
 
+        <!-- logo and title -->
+        <div id="title-bar" class="col-100 d-flex justify-content-between">
+            <div id="logo" class="d-flex justify-content-start align-items-center">
+                <img src="./img/Microsoft_Office_Word_(2019–present).svg.png" alt="Office">
+                <span>Michaelsoft Attic Phrase</span>
+            </div>
+            <div id="title" class="d-flex justify-content-center align-items-center">untitled document</div>
+            <div id="user" class="d-flex justify-content-end align-items-center">
+                <button id="register">Register</button>
+                <button id="login">Login</button>
+            </div>
+        </div>
+
         <!-- toolbar sections -->
         <div id="toolbar-top" class="col-100 d-flex">
 
@@ -69,14 +82,6 @@
                 <div class="col-50 d-flex justify-content-evenly align-items-center">
                     <!-- font -->
                     <select name="font" id="font" class="col-70">
-                        <option value="Arial">Arial</option>
-                        <option value="Brush Script MT">Brush Script MT</option>
-                        <option value="Courier New">Courier New</option>
-                        <option value="Garamond">Garamond</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Tahoma">Tahoma</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <option value="Verdana">Verdana</option>
                     </select>
     
                     <!-- font size -->
@@ -102,7 +107,7 @@
                 </div>
 
                 <!-- text format -->
-                <div id="format-tools" class="col-100 d-flex flex-wrap justify-content-around align-items-center">
+                <div id="format-tools" class="col-70 d-flex flex-wrap justify-content-around align-items-center">
                     <!-- bold -->
                     <button id="bold">
                         <i class="fa-solid fa-bold"></i>
