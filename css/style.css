@@ -129,8 +129,6 @@ header{
 #register, #login{
     background-color: #FAFAFA;
 }
-#user button:hover{
-}
 
 /* toolbar top */
 #toolbar-top{
@@ -264,9 +262,10 @@ input[type="color"]::-moz-color-swatch {
 /* body */
 main{
     overflow: auto;
+    padding: 20px 0;
 }
 .sheet{
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 25mm 20mm 20mm 20mm;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -284,6 +283,58 @@ main{
     outline: none;
 }
 
+/* footer */
+footer{
+    width: 100%; 
+    height: 25px;
+    background-color: #FAFAFA;
+    border: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    color: #444;
+}
+.zoom label{
+    margin: 0 5px;
+    padding: 0 10px;
+    height: 100%;
+}
+
+/* styling input range */
+/* reset to baseline */
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100px;
+}
+/* styling track */
+input[type=range]::-webkit-slider-runnable-track {
+    height: 1px;
+    background: #666;
+}
+input[type=range]::-moz-range-track {
+    height: 1px;
+    background: #666;
+}
+
+/* styling thumb */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 5px;
+    background: #444;
+    margin-top: -7px;
+}
+input[type=range]::-moz-range-thumb {
+    /* firefox default thumb is a circle, we need to remove that */
+    border: none;
+    border-radius: 0;
+    background-color: #444;
+    height: 15px;
+    width: 5px;
+}
+
 /* sidebar */
 #sidebar{
     width: 200px;
@@ -294,6 +345,7 @@ main{
     z-index: 999;
     font-size: large;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    color: #444;
 }
 .hidden-sidebar{
     left: -200px;
@@ -307,6 +359,7 @@ main{
     padding: 10px 20px;
     cursor: pointer;
     margin: 10px 0;
+    color: #000;
 }
 #sidebar ul{
     list-style-type: none;
@@ -329,6 +382,7 @@ main{
     background-color: #E6E6E6;
     border-left: 3px solid #185ABD;
     padding-left: 17px !important;
+    color: #000;
 }
 
 /* text */
@@ -349,7 +403,7 @@ main{
 #clipboard-tools button:hover, #format-tools button:hover, #paragraph-tools button:hover{
     background-color: #E6E6E6;
 }
-#login:hover, #register:hover{
+#user button:hover{
     background-color: #124078;
     color: #FFF;
 }
@@ -357,4 +411,15 @@ main{
     background-color: #E6E6E6;
     border-left: 3px solid #185ABD;
     padding-left: 17px !important;
+    color: #000;
+}
+input[type=range]:hover::-webkit-slider-thumb {
+    background: #185ABD;
+}
+input[type=range]:hover::-moz-range-thumb {
+    background: #185ABD;
+}
+#zoom-label:hover{
+    cursor: pointer;
+    background-color: #E6E6E6;
 }

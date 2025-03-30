@@ -10,6 +10,10 @@ const formatButtons = document.querySelectorAll(".format");
 const scriptButtons = document.querySelectorAll(".script");
 const pageTitle = document.getElementById("title");
 
+const zoomInput = document.getElementById("zoom");
+const zoomLabel = document.getElementById("zoom-label");
+
+// sidebar opening and closig buttons
 const sidebarOpen = document.getElementById("open-sidebar");
 const sidebarClose = document.getElementById("close-sidebar");
 const sidebar = document.getElementById("sidebar");
@@ -99,6 +103,10 @@ const initializer = () => {
 
     // default size
     fontSizeRef.value = 3;
+
+    // zoom
+    zoomLabel.innerText = `${zoomInput.value}%`;
+    zoomInput.value = 100;
 }
 
 // core function to allow page to work
@@ -122,6 +130,13 @@ advancedOptionButton.forEach((button) => {
     });
 });
 
+// zoom
+zoomInput.addEventListener("input", () => {
+    zoomLabel.innerText = `${zoomInput.value}%`;
+
+});
+
+// toggle sidebar on different buttons
 sidebarOpen.addEventListener("click", () => {
     sidebar.classList.remove("hidden-sidebar");
     sidebar.classList.add("active-sidebar");
@@ -130,6 +145,17 @@ sidebarOpen.addEventListener("click", () => {
 sidebarClose.addEventListener("click", () => {
     sidebar.classList.remove("active-sidebar");
     sidebar.classList.add("hidden-sidebar");
+});
+
+// keydown and keyup event provide key code of the key pressed
+// keycode of escape is 27, but keyCode is deprecated
+// use key instead
+// alternative keypressed is deprecated. It also use a different keycode
+document.body.addEventListener('keyup', (e) => {
+    if (e.key == "Escape" && sidebar.classList.contains("active-sidebar")) {
+        sidebar.classList.remove("active-sidebar");
+        sidebar.classList.add("hidden-sidebar");
+    }
 });
 
 // run initializer function as soon as window loads
