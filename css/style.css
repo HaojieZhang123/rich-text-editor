@@ -107,6 +107,9 @@ header{
     height: 100%;
     margin-right: 5px;
 }
+#title{
+    min-width: 50px;
+}
 #user{
     width: 300px;
     gap: 5px;

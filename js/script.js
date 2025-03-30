@@ -8,6 +8,7 @@ let alignButtons = document.querySelectorAll(".align");
 let spacingButtons = document.querySelectorAll(".spacing");
 let formatButtons = document.querySelectorAll(".format");
 let scriptButtons = document.querySelectorAll(".script");
+let pageTitle = document.getElementById("title");
 
 // font list
 let fontList = [
@@ -63,6 +64,13 @@ const addOptions = (target, list) => {
         target.appendChild(option);
     }
 };
+
+// page title change 
+console.log(document.title);
+console.log(pageTitle);
+pageTitle.addEventListener("input", () => {
+    document.title = `Michaelsoft Attic Phrase - ${pageTitle.innerText}`;
+})
 
 // Initial settings
 const initializer = () => {
