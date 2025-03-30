@@ -20,7 +20,7 @@
         <!-- logo and title -->
         <div id="title-bar" class="col-100 d-flex justify-content-between">
             <div id="logo" class="d-flex justify-content-start align-items-center">
-                <img src="./img/Microsoft_Office_Word_(2019–present).svg.png" alt="Office">
+                <img src="./img/word-white-icon.png">
                 <span>WYSIWYG editor</span>
             </div>
             <div id="title" class="d-flex justify-content-center align-items-center" contenteditable="true">untitled document</div>
@@ -34,7 +34,7 @@
         <div id="toolbar-top" class="col-100 d-flex">
 
             <ul class="col-100 d-flex">
-                <li>File</li>
+                <li id="open-sidebar">File</li>
                 <li class="selected">Home</li>
                 <li>Insert</li>
                 <li>Draw</li>
@@ -225,8 +225,54 @@
             <div id="text-input" contenteditable="true"></div>
         </div>
 
-
     </main>
+
+    <div id="sidebar" class="hidden-sidebar d-flex flex-column justify-content-between">
+        <div id="top-sidebar">
+            <div id="close-sidebar">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-container">
+                <hr>
+            </div>
+
+            <ul>
+                <li class="selected-sidebar"><i class="fa-solid fa-house"></i> Home</li>
+                <li><i class="fa-solid fa-file"></i> New</li>
+                <li><i class="fa-solid fa-folder-open"></i> Open</li>
+                <li><i class="fa-solid fa-share-from-square"></i> Share</li>
+            </ul>
+
+            <div class="sidebar-container">
+                <hr>
+            </div>
+
+            <ul>
+                <li>Info</li>
+                <li>Save</li>
+                <li>Save As</li>
+                <li>Print</li>
+                <li>Export</li>
+                <li>Transform</li>
+                <li>Close</li>
+            </ul>
+
+        </div>
+
+        <div id="bottom-sidebar">
+
+            <div class="sidebar-container">
+                <hr>
+            </div>
+
+            <ul>
+                <li>Account</li>
+                <li>Options</li>
+            </ul>
+        </div>
+
+    </div>
 
     <script src="./js/script.js"></script>
 

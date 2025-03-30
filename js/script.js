@@ -1,14 +1,18 @@
 // Import all buttons and elements
-let optionsButtons = document.querySelectorAll(".option-button");
-let advancedOptionButton = document.querySelectorAll(".adv-option-button");
-let fontName = document.getElementById("fontName");
-let fontSizeRef = document.getElementById("fontSize");
-let writingArea = document.getElementById("text-input");
-let alignButtons = document.querySelectorAll(".align");
-let spacingButtons = document.querySelectorAll(".spacing");
-let formatButtons = document.querySelectorAll(".format");
-let scriptButtons = document.querySelectorAll(".script");
-let pageTitle = document.getElementById("title");
+const optionsButtons = document.querySelectorAll(".option-button");
+const advancedOptionButton = document.querySelectorAll(".adv-option-button");
+const fontName = document.getElementById("fontName");
+const fontSizeRef = document.getElementById("fontSize");
+const writingArea = document.getElementById("text-input");
+const alignButtons = document.querySelectorAll(".align");
+const spacingButtons = document.querySelectorAll(".spacing");
+const formatButtons = document.querySelectorAll(".format");
+const scriptButtons = document.querySelectorAll(".script");
+const pageTitle = document.getElementById("title");
+
+const sidebarOpen = document.getElementById("open-sidebar");
+const sidebarClose = document.getElementById("close-sidebar");
+const sidebar = document.getElementById("sidebar");
 
 // font list
 let fontList = [
@@ -69,7 +73,7 @@ const addOptions = (target, list) => {
 console.log(document.title);
 console.log(pageTitle);
 pageTitle.addEventListener("input", () => {
-    document.title = `Michaelsoft Attic Phrase - ${pageTitle.innerText}`;
+    document.title = `${pageTitle.innerText}`;
 })
 
 // Initial settings
@@ -116,6 +120,16 @@ advancedOptionButton.forEach((button) => {
     button.addEventListener("change", () => {
         modifyText(button.id, false, button.value);
     });
+});
+
+sidebarOpen.addEventListener("click", () => {
+    sidebar.classList.remove("hidden-sidebar");
+    sidebar.classList.add("active-sidebar");
+});
+
+sidebarClose.addEventListener("click", () => {
+    sidebar.classList.remove("active-sidebar");
+    sidebar.classList.add("hidden-sidebar");
 });
 
 // run initializer function as soon as window loads
