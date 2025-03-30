@@ -12,6 +12,7 @@ const pageTitle = document.getElementById("title");
 
 const zoomInput = document.getElementById("zoom");
 const zoomLabel = document.getElementById("zoom-label");
+const mainArea = document.querySelector("main");
 
 // sidebar opening and closig buttons
 const sidebarOpen = document.getElementById("open-sidebar");
@@ -131,10 +132,19 @@ advancedOptionButton.forEach((button) => {
 });
 
 // zoom
-zoomInput.addEventListener("input", () => {
+zoomInput.addEventListener("click", (e) => {
+    // label correspond on succrent zoom level
     zoomLabel.innerText = `${zoomInput.value}%`;
 
+    // actual zoom functionality
+    mainArea.style.zoom = `${zoomInput.value}%`;
+
 });
+
+// clicking zoom label will bring back zoom level to default value: 100%
+zoomLabel.addEventListener("click", (e) => {
+    zoomInput.value = 100;
+})
 
 // toggle sidebar on different buttons
 sidebarOpen.addEventListener("click", () => {
