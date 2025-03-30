@@ -293,8 +293,16 @@ footer{
     bottom: 0;
     color: #444;
 }
+footer div{
+    height: 100%;
+}
+footer span{
+    padding: 0 5px;
+}
+#left-footer>div, #right-footer>div{
+    padding: 0 10px;
+}
 .zoom label{
-    margin: 0 5px;
     padding: 0 10px;
     height: 100%;
 }
@@ -420,6 +428,10 @@ input[type=range]:hover::-moz-range-thumb {
     background: #185ABD;
 }
 #zoom-label:hover{
+    cursor: pointer;
+    background-color: #E6E6E6;
+}
+#left-footer>div:hover{
     cursor: pointer;
     background-color: #E6E6E6;
 }

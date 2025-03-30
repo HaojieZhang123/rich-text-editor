@@ -1,15 +1,24 @@
 // Import all buttons and elements
+// page elements
+const pageTitle = document.getElementById("title");
+const writingArea = document.getElementById("text-input");
+
+// toolbar buttons
 const optionsButtons = document.querySelectorAll(".option-button");
 const advancedOptionButton = document.querySelectorAll(".adv-option-button");
 const fontName = document.getElementById("fontName");
 const fontSizeRef = document.getElementById("fontSize");
-const writingArea = document.getElementById("text-input");
 const alignButtons = document.querySelectorAll(".align");
 const spacingButtons = document.querySelectorAll(".spacing");
 const formatButtons = document.querySelectorAll(".format");
 const scriptButtons = document.querySelectorAll(".script");
-const pageTitle = document.getElementById("title");
 
+// footer elements
+// left footer
+const currentPage = document.getElementById("current-page");
+const totalPage = document.getElementById("total-pages");
+const wordCount = document.getElementById("word-count");
+// right footer
 const zoomInput = document.getElementById("zoom");
 const zoomLabel = document.getElementById("zoom-label");
 const mainArea = document.querySelector("main");
@@ -81,6 +90,10 @@ pageTitle.addEventListener("input", () => {
     document.title = `${pageTitle.innerText}`;
 })
 
+// total page count
+let totalPageNumber = mainArea.getElementsByClassName("sheet").length
+totalPage.innerText = totalPageNumber;
+
 // Initial settings
 const initializer = () => {
     // buttons highlights
@@ -130,6 +143,12 @@ advancedOptionButton.forEach((button) => {
         modifyText(button.id, false, button.value);
     });
 });
+
+// active word count
+// event triggered every time a key gets pressed
+writingArea.addEventListener("keyup", () => {
+    wordCount.innerText = writingArea.innerText.split(' ').length;
+})
 
 // zoom
 zoomInput.addEventListener("click", (e) => {
