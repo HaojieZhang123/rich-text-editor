@@ -89,5 +89,26 @@ const initializer = () => {
     fontSizeRef.value = 3;
 }
 
+// core function to allow page to work
+const modifyText = (command, defaultUi, value) => {
+    //execCommand executes command on selected text
+    document.execCommand(command, defaultUi, value);
+    // we'll use the id of each button as command
+};
+
+//For basic operations which don't need value parameter
+optionsButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        modifyText(button.id, false, null);
+    });
+});
+
+//options that require value parameter (e.g colors, fonts)
+advancedOptionButton.forEach((button) => {
+    button.addEventListener("change", () => {
+        modifyText(button.id, false, button.value);
+    });
+});
+
 // run initializer function as soon as window loads
 window.onload = initializer();

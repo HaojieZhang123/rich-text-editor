@@ -12,6 +12,9 @@ body{
 ul{
     list-style-type: none;
 }
+#text-input ul{
+    list-style-type: disc;
+}
 
 /* flexbox */
 .d-flex{
