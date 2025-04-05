@@ -8,13 +8,11 @@ I'll be using only HTML, CSS and JS. The objective is to learn without the help 
 
 Need work:
 Find a way to display with page is being actively written on in every instance
-Find a way to count total word sums in every page
 
-Create insert section toolbar
 Needed:
-insert new page
 insert table
 insert image given url
-insert link
 
-Upon opening new toolbar section, the new toolbar must have entrance and exit animation.
+It's possible to know the selection starting and ending potition with the property selectionStart and selectionEnd. It is so possible to know the user cursor position inside the text editor with selection start.
+
+Find a way to insert table and image on the cursor's position
