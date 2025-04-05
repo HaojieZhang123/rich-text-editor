@@ -276,7 +276,7 @@ input[type="color"]::-moz-color-swatch {
 
 /* Insert toolbar */
 /* Insert new page */
-button#new-page{
+button#new-page, button#createLink, button#unlink{
     width: 60px;
     height: 60px;
     font-size: 30px;

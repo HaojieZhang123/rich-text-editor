@@ -38,6 +38,7 @@ const formatButtons = document.querySelectorAll(".format");
 const scriptButtons = document.querySelectorAll(".script");
 
 const newPage = document.getElementById("new-page");
+const linkButton = document.getElementById("createLink");
 
 // footer elements
 // left footer
@@ -168,6 +169,38 @@ advancedOptionButton.forEach((button) => {
         modifyText(button.id, false, button.value);
     });
 });
+
+//link
+linkButton.addEventListener("click", () => {
+    let userLink = prompt("Enter a URL");
+    //if link has http then pass directly else add https
+    if (userLink.includes("http")) {
+        modifyText(linkButton.id, false, userLink);
+    } else {
+        userLink = "http://" + userLink;
+        modifyText(linkButton.id, false, userLink);
+    }
+});
+
+// to make the link created clickable, I need to remove contenteditable from text-input div when ctrl is pressed
+// and add it back when ctrl is released
+mainArea.addEventListener("keydown", (e) => {
+    const writingAreas = document.querySelectorAll(".text-input"); // Dynamically select all text-input elements
+    if (e.key == "Control") {
+        writingAreas.forEach((area) => {
+            area.setAttribute("contenteditable", "false");
+        });
+    }
+});
+
+mainArea.addEventListener("keyup", () => {
+    const writingAreas = document.querySelectorAll(".text-input"); // Dynamically select all text-input elements
+    if (e.key == "Control") {
+        writingAreas.forEach((area) => {
+            area.setAttribute("contenteditable", "true");
+        });
+    }
+})
 
 // show large toolbar
 const showToolbar = (toolbar) => {
