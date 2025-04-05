@@ -157,12 +157,14 @@ header{
     transform: translateX(+100%); /* Slide out of view */
     visibility: hidden;
     opacity: 0;
+    transition-delay: 0.3s; /* Delay the transition to allow for the slide out effect */
 }
 .visible-toolbar{
     transform: translateX(0); /* Slide into view */
     visibility: visible;
     transition: 0.3s ease-in-out;
     opacity: 1;
+    z-index: 200;
 }
 
 .section-label{
