@@ -461,3 +461,30 @@ input[type=range]:hover::-moz-range-thumb {
     cursor: pointer;
     background-color: #E6E6E6;
 }
+
+@page {
+    size: A4;
+    margin: 0
+}
+
+@media print {
+    /* Hide the toolbar and footer when printing */
+    #title-bar, #toolbar-top, .big-toolbar,footer.d-flex, footer #left-footer, footer #right-footer, #sidebar {
+        display: none;
+    }
+    .sheet {
+        box-shadow: none; /* Remove shadow for print */
+        margin: 0; /* Remove margin for print */
+        /* A4 size */
+        width: 210mm;
+        height: 297mm; 
+        box-sizing: border-box; /* Include padding in width and height */
+        page-break-after: always; /* Ensure each sheet starts on a new page */
+    }
+    body {
+        margin: 0; /* Remove margin for print */
+    }
+    main{
+        padding: 0; /* Remove padding for print */
+    }
+}

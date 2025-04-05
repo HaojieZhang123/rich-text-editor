@@ -16,3 +16,8 @@ insert image given url
 It's possible to know the selection starting and ending potition with the property selectionStart and selectionEnd. It is so possible to know the user cursor position inside the text editor with selection start.
 
 Find a way to insert table and image on the cursor's position
+
+row 185-203 JS commit #21
+clickable link via ctrl key press is commented. When using shotcut such as ctrl+C, ctrl+V, ctrl+P..... it does not pick up keyup of ctrl key, thus making paper sheets permanently not content editable
+
+Needs fixing

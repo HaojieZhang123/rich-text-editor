@@ -184,23 +184,23 @@ linkButton.addEventListener("click", () => {
 
 // to make the link created clickable, I need to remove contenteditable from text-input div when ctrl is pressed
 // and add it back when ctrl is released
-mainArea.addEventListener("keydown", (e) => {
-    const writingAreas = document.querySelectorAll(".text-input"); // Dynamically select all text-input elements
-    if (e.key == "Control") {
-        writingAreas.forEach((area) => {
-            area.setAttribute("contenteditable", "false");
-        });
-    }
-});
+// mainArea.addEventListener("keydown", (e) => {
+//     const writingAreas = document.querySelectorAll(".text-input"); // Dynamically select all text-input elements
+//     if (e.key == "Control") {
+//         writingAreas.forEach((area) => {
+//             area.setAttribute("contenteditable", "false");
+//         });
+//     }
+// });
 
-mainArea.addEventListener("keyup", (e) => {
-    const writingAreas = document.querySelectorAll(".text-input"); // Dynamically select all text-input elements
-    if (e.key == "Control") {
-        writingAreas.forEach((area) => {
-            area.setAttribute("contenteditable", "true");
-        });
-    }
-})
+// mainArea.addEventListener("keyup", (e) => {
+//     const writingAreas = document.querySelectorAll(".text-input"); // Dynamically select all text-input elements
+//     if (e.key == "Control") {
+//         writingAreas.forEach((area) => {
+//             area.setAttribute("contenteditable", "true");
+//         });
+//     }
+// })
 
 // show large toolbar
 const showToolbar = (toolbar) => {
