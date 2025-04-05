@@ -288,7 +288,7 @@ button#new-page, button#createLink, button#unlink{
 /* body */
 main{
     overflow: auto;
-    padding: 120px 0 30px 0;
+    padding: 0px 0 30px 0;
 }
 .sheet{
     margin: 10px auto;

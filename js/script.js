@@ -147,6 +147,7 @@ const initializer = () => {
     // zoom
     zoomLabel.innerText = `${zoomInput.value}%`;
     zoomInput.value = 100;
+    mainArea.style.marginTop = `${(12000 / zoomInput.value)}px`;
 }
 
 // core function to allow page to work
@@ -312,18 +313,24 @@ mainArea.addEventListener("keyup", () => {
 });
 
 // zoom
-zoomInput.addEventListener("click", (e) => {
-    // label correspond on succrent zoom level
+zoomInput.addEventListener("input", (e) => {
+    // label correspond on current zoom level
     zoomLabel.innerText = `${zoomInput.value}%`;
 
     // actual zoom functionality
     mainArea.style.zoom = `${zoomInput.value}%`;
+    // margin top is set to 15000px / zoom level to keep the page in the same position
+    // as the zoom level changes, the margin top will also change to keep the page in the same position
+    // 120px is the default margin top for 100% zoom level, increased by 100 times because we are dealing with a percentage (120px * 100 / input)
+    mainArea.style.marginTop = `${(12000 / zoomInput.value)}px`;
 
 });
 
 // clicking zoom label will bring back zoom level to default value: 100%
 zoomLabel.addEventListener("click", (e) => {
     zoomInput.value = 100;
+    zoomLabel.innerText = `${zoomInput.value}%`;
+    mainArea.style.zoom = `${zoomInput.value}%`;
 })
 
 // toggle sidebar on different buttons
