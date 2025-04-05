@@ -1,4 +1,28 @@
 // Import all buttons and elements
+// menu
+const sidebarOpen = document.getElementById("open-sidebar");
+const topHome = document.getElementById("top-home");
+const topInsert = document.getElementById("top-insert");
+const topDraw = document.getElementById("top-draw");
+const topDesign = document.getElementById("top-design");
+const topLayout = document.getElementById("top-layout");
+const topReference = document.getElementById("top-reference");
+const topMailings = document.getElementById("top-mailings");
+const topReview = document.getElementById("top-review");
+const topView = document.getElementById("top-view");
+const topHelp = document.getElementById("top-help");
+// toolbars
+const toolbarHome = document.getElementById("toolbar-home");
+const toolbarInsert = document.getElementById("toolbar-insert");
+const toolbarDraw = document.getElementById("toolbar-draw");
+const toolbarDesign = document.getElementById("toolbar-design");
+const toolbarLayout = document.getElementById("toolbar-layout");
+const toolbarReference = document.getElementById("toolbar-reference");
+const toolbarMailings = document.getElementById("toolbar-mailings");
+const toolbarReview = document.getElementById("toolbar-review");
+const toolbarView = document.getElementById("toolbar-view");
+const toolbarHelp = document.getElementById("toolbar-help");
+
 // page elements
 const pageTitle = document.getElementById("title");
 const writingArea = document.querySelectorAll(".text-input");
@@ -26,7 +50,6 @@ const zoomLabel = document.getElementById("zoom-label");
 const mainArea = document.querySelector("main");
 
 // sidebar opening and closig buttons
-const sidebarOpen = document.getElementById("open-sidebar");
 const sidebarClose = document.getElementById("close-sidebar");
 const sidebar = document.getElementById("sidebar");
 
@@ -144,6 +167,89 @@ advancedOptionButton.forEach((button) => {
     button.addEventListener("change", () => {
         modifyText(button.id, false, button.value);
     });
+});
+
+// show large toolbar
+const showToolbar = (toolbar) => {
+    // hide all toolbars
+    toolbarHome.classList.remove("visible-toolbar");
+    toolbarInsert.classList.remove("visible-toolbar");
+    toolbarDraw.classList.remove("visible-toolbar");
+    toolbarDesign.classList.remove("visible-toolbar");
+    toolbarLayout.classList.remove("visible-toolbar");
+    toolbarReference.classList.remove("visible-toolbar");
+    toolbarMailings.classList.remove("visible-toolbar");
+    toolbarReview.classList.remove("visible-toolbar");
+    toolbarView.classList.remove("visible-toolbar");
+    toolbarHelp.classList.remove("visible-toolbar");
+
+    toolbarHome.classList.add("hidden-toolbar");
+    toolbarInsert.classList.add("hidden-toolbar");
+    toolbarDraw.classList.add("hidden-toolbar");
+    toolbarDesign.classList.add("hidden-toolbar");
+    toolbarLayout.classList.add("hidden-toolbar");
+    toolbarReference.classList.add("hidden-toolbar");
+    toolbarMailings.classList.add("hidden-toolbar");
+    toolbarReview.classList.add("hidden-toolbar");
+    toolbarView.classList.add("hidden-toolbar");
+    toolbarHelp.classList.add("hidden-toolbar");
+
+    // hide top menu selected class
+    topHome.classList.remove('selected');
+    topInsert.classList.remove('selected');
+    topDraw.classList.remove('selected');
+    topDesign.classList.remove('selected');
+    topLayout.classList.remove('selected');
+    topReference.classList.remove('selected');
+    topMailings.classList.remove('selected');
+    topReview.classList.remove('selected');
+    topView.classList.remove('selected');
+    topHelp.classList.remove('selected');
+
+    // show selected toolbar
+    toolbar.classList.remove("hidden-toolbar");
+    toolbar.classList.add("visible-toolbar");
+}
+// event listeners for each button to show the corresponding toolbar
+topHome.addEventListener("click", () => {
+    showToolbar(toolbarHome);
+    topHome.classList.add('selected');
+});
+topInsert.addEventListener("click", () => {
+    showToolbar(toolbarInsert);
+    topInsert.classList.add('selected');
+});
+topDraw.addEventListener("click", () => {
+    showToolbar(toolbarDraw);
+    topDraw.classList.add('selected');
+});
+topDesign.addEventListener("click", () => {
+    showToolbar(toolbarDesign);
+    topDesign.classList.add('selected');
+});
+topLayout.addEventListener("click", () => {
+    showToolbar(toolbarLayout);
+    topLayout.classList.add('selected');
+});
+topReference.addEventListener("click", () => {
+    showToolbar(toolbarReference);
+    topReference.classList.add('selected');
+});
+topMailings.addEventListener("click", () => {
+    showToolbar(toolbarMailings);
+    topMailings.classList.add('selected');
+});
+topReview.addEventListener("click", () => {
+    showToolbar(toolbarReview);
+    topReview.classList.add('selected');
+});
+topView.addEventListener("click", () => {
+    showToolbar(toolbarView);
+    topView.classList.add('selected');
+});
+topHelp.addEventListener("click", () => {
+    showToolbar(toolbarHelp);
+    topHelp.classList.add('selected');
 });
 
 // new page
