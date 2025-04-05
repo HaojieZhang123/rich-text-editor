@@ -193,7 +193,7 @@ mainArea.addEventListener("keydown", (e) => {
     }
 });
 
-mainArea.addEventListener("keyup", () => {
+mainArea.addEventListener("keyup", (e) => {
     const writingAreas = document.querySelectorAll(".text-input"); // Dynamically select all text-input elements
     if (e.key == "Control") {
         writingAreas.forEach((area) => {
