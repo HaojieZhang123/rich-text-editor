@@ -155,14 +155,14 @@ header{
     color: #666;
 }
 
-/* toolbar home */
-#toolbar-home{
-    background-color: #FAFAFA;
-}
-
 .toolbar-section{
     padding: 0 5px;
     border-right: 1px solid #ccc;
+}
+
+/* toolbar home */
+#toolbar-home{
+    background-color: #FAFAFA;
 }
 
 /* clipboard */
@@ -259,6 +259,17 @@ input[type="color"]::-moz-color-swatch {
     font-size: large;
 }
 
+/* Insert toolbar */
+/* Insert new page */
+button#new-page{
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    /* background-color: #E6E6E6; */
+    cursor: pointer;
+    margin: 0 2px;
+}
+
 /* body */
 main{
     overflow: auto;
@@ -274,12 +285,12 @@ main{
     width: 210mm;
     height: 297mm;
 }
-#text-input{
+.text-input{
     width: 100%;
     height: 100%;
     overflow-wrap: break-word;
 }
-#text-input:focus{
+.text-input:focus{
     outline: none;
 }
 

@@ -36,16 +36,16 @@
 
             <ul class="col-100 d-flex">
                 <li id="open-sidebar">File</li>
-                <li class="selected">Home</li>
-                <li>Insert</li>
-                <li>Draw</li>
-                <li>Design</li>
-                <li>Layout</li>
-                <li>Reference</li>
-                <li>Mailings</li>
-                <li>Review</li>
-                <li>View</li>
-                <li>Help</li>
+                <li id="top-home" class="selected">Home</li>
+                <li id="top-insert">Insert</li>
+                <li id="top-draw">Draw</li>
+                <li id="top-design">Design</li>
+                <li id="top-layout">Layout</li>
+                <li id="top-reference">Reference</li>
+                <li id="top-mailings">Mailings</li>
+                <li id="top-review">Review</li>
+                <li id="top-view">View</li>
+                <li id="top-help">Help</li>
             </ul>
 
         </div>
@@ -220,13 +220,48 @@
             </div>
         </div>
 
+        <!-- Insert toolbar -->
+        <div id="toolbar-insert" class="big-toolbar d-flex">
+            <!-- add page -->
+            <div id="pages-tools" class="d-flex flex-wrap justify-content-around align-items-center toolbar-section">
+
+                <button id="new-page" class="col-100 d-flex justify-content-evenly align-items-center">
+                    <i class="fa-regular fa-file"></i>
+                </button>
+
+                <div class="col-100 section-label text-center">
+                    Pages
+                </div>
+
+            </div>
+            <!-- table -->
+            <div id="table-tools" class="d-flex flex-wrap justify-content-around align-items-center toolbar-section">
+
+                <div class="col-100 section-label text-center">
+                    Tables
+                </div>
+
+            </div>
+
+            <!-- link -->
+            <div id="pages-tools"
+            class="d-flex flex-wrap justify-content-around align-items-center toolbar-section">
+
+                <div class="col-100 section-label text-center">
+                    Links
+                </div>
+
+            </div>
+
+        </div>
+
 
     </header>
 
     <main>
 
         <div class="sheet A4">
-            <div id="text-input" contenteditable="true"></div>
+            <div class="text-input" contenteditable="true"></div>
         </div>
 
     </main>

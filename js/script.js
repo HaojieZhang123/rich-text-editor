@@ -1,7 +1,7 @@
 // Import all buttons and elements
 // page elements
 const pageTitle = document.getElementById("title");
-const writingArea = document.getElementById("text-input");
+const writingArea = document.querySelectorAll(".text-input");
 
 // toolbar buttons
 const optionsButtons = document.querySelectorAll(".option-button");
@@ -12,6 +12,8 @@ const alignButtons = document.querySelectorAll(".align");
 const spacingButtons = document.querySelectorAll(".spacing");
 const formatButtons = document.querySelectorAll(".format");
 const scriptButtons = document.querySelectorAll(".script");
+
+const newPage = document.getElementById("new-page");
 
 // footer elements
 // left footer
@@ -144,11 +146,31 @@ advancedOptionButton.forEach((button) => {
     });
 });
 
+// new page
+newPage.addEventListener("click", () => {
+    //create new div with class sheet
+    const newSheet = `<div class="sheet A4">
+                        <div class="text-input" contenteditable="true"></div>
+                    </div>`
+    mainArea.innerHTML += newSheet;
+    totalPageNumber += 1;
+    totalPage.innerText = totalPageNumber;
+});
+
 // active word count
 // event triggered every time a key gets pressed
-writingArea.addEventListener("keyup", () => {
-    wordCount.innerText = writingArea.innerText.split(' ').length;
-})
+mainArea.addEventListener("keyup", () => {
+    let wordCountNumber = 0;
+    const writingAreas = document.querySelectorAll(".text-input"); // Dynamically select all text-input elements
+    writingAreas.forEach((area) => {
+        wordCountNumber += area.innerText.trim().split(/\s+/).filter(word => word.length > 0).length; // Count words
+
+        // trim() removes leading and trailing spaces
+        // split(/\s+/) splits the string into an array of words based on whitespace
+        // filter(word => word.length > 0) filters out empty strings
+    });
+    wordCount.innerText = wordCountNumber;
+});
 
 // zoom
 zoomInput.addEventListener("click", (e) => {
