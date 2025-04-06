@@ -26,6 +26,7 @@ const toolbarHelp = document.getElementById("toolbar-help");
 // page elements
 const pageTitle = document.getElementById("title");
 const writingArea = document.querySelectorAll(".text-input");
+const tableButton = document.getElementById('create-table');
 
 // toolbar buttons
 const optionsButtons = document.querySelectorAll(".option-button");
@@ -295,6 +296,23 @@ newPage.addEventListener("click", () => {
     mainArea.innerHTML += newSheet;
     totalPageNumber += 1;
     totalPage.innerText = totalPageNumber;
+});
+
+// function to create table
+const createTable = (rows, cols) =>{
+    let table = '<table>'
+    for(i=0; i<rows; i++){
+        table += '<tr>';
+        for(j=0; j<cols; j++){
+            table += '<td></td>'
+        }
+        table += '</tr>'
+    }
+}
+
+// event upon clicking create table button
+tableButton.addEventListener('click', (e) =>{
+
 });
 
 // active word count

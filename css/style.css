@@ -277,14 +277,21 @@ input[type="color"]::-moz-color-swatch {
 }
 
 /* Insert toolbar */
-/* Insert new page */
-button#new-page, button#createLink, button#unlink{
+.big-button{
     width: 60px;
     height: 60px;
     font-size: 30px;
     /* background-color: #E6E6E6; */
     cursor: pointer;
     margin: 0 2px;
+}
+/* Insert new page */
+#table-form-container{
+    max-width: 300px;
+}
+#table-form-container input{
+    margin: 4px 10px;
+    padding: 2px;
 }
 
 /* body */
