@@ -488,11 +488,12 @@ input[type=range]:hover::-moz-range-thumb {
 
 @media print {
     /* Hide the toolbar and footer when printing */
-    #title-bar, #toolbar-top, .big-toolbar,footer.d-flex, footer #left-footer, footer #right-footer, #sidebar {
+    #title-bar, #toolbar-top, .big-toolbar, footer.d-flex, footer #left-footer, footer #right-footer, #sidebar {
         display: none;
     }
     .sheet {
         box-shadow: none; /* Remove shadow for print */
+        border: none; /* Remove border for print */
         margin: 0; /* Remove margin for print */
         /* A4 size */
         width: 210mm;
@@ -504,6 +505,8 @@ input[type=range]:hover::-moz-range-thumb {
         margin: 0; /* Remove margin for print */
     }
     main{
-        padding: 0; /* Remove padding for print */
+        /* Remove padding and margin for print */
+        padding: 0px !important;
+        margin: 0px !important;
     }
 }
