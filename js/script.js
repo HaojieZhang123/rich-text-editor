@@ -110,9 +110,7 @@ const addOptions = (target, list) => {
     }
 };
 
-// page title change 
-console.log(document.title);
-console.log(pageTitle);
+// page title change on input
 pageTitle.addEventListener("input", () => {
     document.title = `${pageTitle.innerText}`;
 })
@@ -308,11 +306,31 @@ const createTable = (rows, cols) =>{
         }
         table += '</tr>'
     }
+    table += '</table>'
+    return table;
 }
 
 // event upon clicking create table button
 tableButton.addEventListener('click', (e) =>{
+    e.preventDefault();
 
+    // get row and column numbers from user input in forms
+    const rows = document.getElementById('table-rows').value;
+    const cols = document.getElementById('table-cols').value;
+
+    // create table
+    let table = createTable(rows, cols);
+
+    // add space after table
+    table += '<br>';
+
+    // get user cursor position to insert table at that position
+    const cursorPos = window.getSelection().getRangeAt(0);
+
+    // paste the table string diretly in cursor position as html
+    const tableNode = document.createElement('div');
+    tableNode.innerHTML = table;
+    cursorPos.insertNode(tableNode);
 });
 
 // active word count
