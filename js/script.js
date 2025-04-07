@@ -39,6 +39,10 @@ const formatButtons = document.querySelectorAll(".format");
 const scriptButtons = document.querySelectorAll(".script");
 
 const newPage = document.getElementById("new-page");
+const insertImage = document.getElementById("insert-image");
+const insertLocalImage = document.getElementById("insert-local-image");
+const uploadImage = document.getElementById("file-upload");
+const uploadImageLabel = document.getElementById("file-upload-label");
 const linkButton = document.getElementById("createLink");
 
 // footer elements
@@ -331,6 +335,38 @@ tableButton.addEventListener('click', (e) =>{
     const tableNode = document.createElement('div');
     tableNode.innerHTML = table;
     cursorPos.insertNode(tableNode);
+});
+
+insertImage.addEventListener("click", () => {
+    const url = prompt("Enter the URL of the image");
+    const image = `<img src="${url}" alt="Image">`;
+    document.execCommand("insertHTML", false, image);
+});
+
+insertLocalImage.addEventListener("click", () => {
+    // upon clicking the button, input type file's custom lable will be shown
+    uploadImageLabel.classList.remove('d-none');
+    uploadImageLabel.classList.add('d-flex');
+});
+
+uploadImageLabel.addEventListener("click", () => {
+
+    uploadImage.addEventListener("change", (e) => {
+        // FileReader reads files in input. For more, look at
+        // https://developer.mozilla.org/en-US/docs/Web/API/FileReader
+        const reader = new FileReader();
+        console.log(reader);
+        reader.addEventListener("load", (e) => {
+            const image = `<img src="${URL.createObjectURL(e.target.files[0])}" alt="Image">`;
+            console.log(image);
+            document.execCommand("insertHTML", false, image);
+        });
+    });
+
+
+    // hide input type file's custom lable
+    uploadImageLabel.classList.remove('d-flex');
+    uploadImageLabel.classList.add('d-none');
 });
 
 // active word count

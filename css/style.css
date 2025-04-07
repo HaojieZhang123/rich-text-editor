@@ -13,10 +13,11 @@ body{
 ul{
     list-style-type: none;
 }
-#text-input ul{
+
+/* elements inside text-input */
+.text-input ul{
     list-style-type: disc;
 }
-
 table{
     border-collapse: collapse;
     width: 100%;
@@ -26,6 +27,12 @@ table, th, td{
     padding: 5px;
     text-align: left;
 }
+/* resizable images inside paper sheet */
+.text-input img{
+    resize: both;
+    max-width: 100%;
+}
+
 
 /* flexbox */
 .d-flex{
@@ -34,6 +41,14 @@ table, th, td{
 
 .flex-column{
     flex-direction: column;
+}
+
+.d-block{
+    display: block;
+}
+
+.d-none{
+    display: none;
 }
 
 .justify-content-center{
@@ -302,6 +317,18 @@ input[type="color"]::-moz-color-swatch {
 #table-form-container input{
     margin: 4px 10px;
     padding: 2px;
+}
+/* local image input */
+input[type=file]{
+    display: none;
+}
+.file-upload-label{
+    border: 1px solid #999;
+    /* display: inline-block; */
+    border-radius: 5px;
+    background-color: #E9E9ED;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 /* body */

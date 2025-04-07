@@ -10,7 +10,7 @@ Need work:
 Find a way to display with page is being actively written on in every instance
 
 Needed:
-insert image given url and via upload by user
+insert image via upload by user
 
 It's possible to know the selection starting and ending potition with the property selectionStart and selectionEnd. It is so possible to know the user cursor position inside the text editor with selection start.
 
@@ -18,9 +18,11 @@ Find a way to insert and image on the cursor's position (same way as table, ask 
 
 Insert uploaded images
 https://stackoverflow.com/questions/60203320/inserting-and-using-the-user-uploaded-image-in-html-and-javascript
+needs to study this more in depth
 
 resize image for user
 https://www.w3schools.com/cssref/css3_pr_resize.php
+resize not working. probably similar to links. contenteditable conflicting
 
 row 185-203 JS commit #21
 clickable link via ctrl key press is commented. When using shotcut such as ctrl+C, ctrl+V, ctrl+P..... it does not pick up keyup of ctrl key, thus making paper sheets permanently not content editable
